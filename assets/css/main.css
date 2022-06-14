@@ -1,0 +1,269 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+  margin:0;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
+}
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:14px;
+  color: #333333;
+}
+
+.header {
+  position:relative;
+  text-align:center;
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  color:white;
+}
+.logo {
+  width:50px;
+  fill:white;
+  padding-right:15px;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.inner-header {
+  height:65vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
+
+/* form */
+.cont-1 .box1 form label {
+
+  font-weight: 600;
+  color: white;
+}
+
+.cont-1 .box1 form select {
+  color: white;
+}
+
+.cont-1 .box1 form input {
+  background: none;
+  border: none;
+  color: white;
+  /* color: white; */
+  border-bottom: 1px solid white;
+}
+
+.cont-1 .box1 form select {
+  background: none;
+  border: none;
+  color: black;
+  border-bottom: 2px solid white;
+}
+
+.cont-1 .box1 form textarea {
+  background: none;
+  border: none;
+  /* color: white; */
+  border-bottom: 2px solid white;
+}
+
+----------------------login-------------------*/
+
+
+.container {
+    min-height: 100vh;
+    /* background: #08071d; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    background-image: url('../image/home-banner-bg1.png');
+    background-position: center;
+    background-size: cover;
+    height: 790px;
+
+    padding-top: 100px;
+}
+
+
+.container form {
+    width: 670px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+
+
+
+}
+
+.container form h1 {
+    color: #fff;
+    font-weight: 500;
+    margin-top: 20px;
+    width: 500px;
+    text-align: center;
+
+
+
+}
+
+.container form input {
+    width: 290px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid #fff;
+    margin-top: 35px;
+}
+
+.container form input::placeholder {
+    color: #ddd;
+}
+
+.container form #lastName,
+.container form #mobile {
+    margin-left: 20px;
+}
+
+.container form h4 {
+    color: #fff;
+    font-weight: 300;
+    width: 600px;
+    margin-top: 20px;
+}
+
+.container form textarea {
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 80px;
+    max-height: 80px;
+}
+
+textarea::-webkit-scrollbar {
+    width: 1em;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: rgba(194, 194, 194, 0.713);
+}
+
+.container form #button {
+    border: none;
+    background: #fff;
+    border-radius: 5px;
+
+    font-weight: 600;
+    font-size: 20px;
+    color: #333;
+    width: 200px;
+}
+
+
+.container form #button:hover {
+    opacity: 0.7;
+}
+
+
+/* responsive */
+
+@media (max-width:768px) {
+    .container .box1 {
+        display: none;
+    }
+
+    .container.form {
+        width: 515px;
+    }
+
+}
